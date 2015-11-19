@@ -1,6 +1,4 @@
 (ns houston-talk.approach3.typed
-  "Convert static type checking to runtime checking in
-  this namespace."
   {:lang :core.typed
    :core.typed {:features #{:runtime-check}}}
   (:require [clojure.core.typed :as t]
@@ -14,11 +12,13 @@
 (defn use-b []
   (u/b 1))
 
-(t/ann use-c [[t/Int :-> t/Int] :-> t/Int])
-(defn use-c [f]
-  (u/c f))
+;(t/ann use-c [[t/Int :-> t/Int] :-> t/Int])
+;(defn use-c [f]
+;  (u/c f))
 
-(comment
-  (use-c identity)
-  (use-c inc)
-  (use-c str))
+(t/ann take-int [t/Int :-> t/Int])
+(defn take-int [n]
+  (inc n))
+
+(take-int 1)
+(take-int nil)

@@ -8,6 +8,6 @@
 (t/ann b [t/Int :-> t/Int])
 (def b inc)
 
-(t/ann c [[t/Str :-> t/Int] :-> t/Int])
+(t/ann c [[t/Int :-> t/Int] :-> t/Int])
 (defn c [f]
-  (f "string"))
+  (f 1))

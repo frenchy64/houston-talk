@@ -12,6 +12,10 @@
 (defn use-b []
   (u/b 1))
 
-(t/ann use-c [[t/Int :-> t/Int] :-> t/Int])
+(t/defalias N1
+  "Was banana"
+  [t/Int :-> t/Int])
+
+(t/ann use-c [N1 :-> t/Int])
 (defn use-c [f]
   (u/c f))

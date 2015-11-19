@@ -1,6 +1,6 @@
 (ns houston-talk.approach2.untyped)
 
 (def a 1)
-(def b inc)
+(defn b [n] "fail")
 (defn c [f]
   (f "string"))

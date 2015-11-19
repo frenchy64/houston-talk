@@ -12,10 +12,16 @@
 (defn use-a []
   (inc u/a))
 
+;(use-a)
+
 (t/ann use-b [:-> t/Int])
 (defn use-b []
   (u/b 1))
 
+;(use-b)
+
 (t/ann use-c [[t/Int :-> t/Int] :-> t/Int])
 (defn use-c [f]
   (u/c f))
+
+;(use-c inc)

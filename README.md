@@ -9,7 +9,7 @@ Our language boundary between typed and untyped is as the dotted line below.
 ```
 Typed land
 
-houston-talk.problem.safe-import
+houston-talk.problem.typed
 
 -----------------------------
 
