@@ -1,7 +1,9 @@
-(ns houston-talk.fully-typed
+(ns houston-talk.approach1.typed
+  "Safe importing of untyped code by porting all untyped code to
+  be typed."
   {:lang :core.typed}
   (:require [clojure.core.typed :as t]
-            [houston-talk.untyped-ported :as u]))
+            [houston-talk.approach1.untyped :as u]))
 
 (t/ann use-a [:-> t/Int])
 (defn use-a []
@@ -13,4 +15,4 @@
 
 (t/ann use-c [[t/Int :-> t/Int] :-> t/Int])
 (defn use-c [f]
-  (u/c f))
+  (u/c f)) ;; types don't match at compile time

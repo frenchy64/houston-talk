@@ -1,8 +1,10 @@
-(ns houston-talk.infer-import
+(ns houston-talk.approach3.typed
+  "Convert static type checking to runtime checking in
+  this namespace."
   {:lang :core.typed
    :core.typed {:features #{:runtime-check}}}
   (:require [clojure.core.typed :as t]
-            [houston-talk.untyped :as u]))
+            [houston-talk.approach3.untyped :as u]))
 
 (t/ann use-a [:-> t/Int])
 (defn use-a []

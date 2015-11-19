@@ -1,7 +1,8 @@
-(ns houston-talk.safe-import
+(ns houston-talk.approach2.typed
+  "Safe importing of untyped vars via contracts."
   {:lang :core.typed}
   (:require [clojure.core.typed :as t]
-            [houston-talk.untyped :as u]))
+            [houston-talk.approach2.untyped :as u]))
 
 (t/untyped-var u/a t/Int)
 (t/untyped-var u/b [t/Int :-> t/Int])
